@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන - Home</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo-icon">
+                <i class="fa-solid fa-dharmachakra"></i>
+            </div>
+            <div class="nav-title">ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන</div>
+        </div>
+
+        <div class="mobile-menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">මුල් පිටුව</a></li>
+            <li><a href="about.html">අපි ගැන</a></li>
+            <li><a href="courses.html">පාඨමාලා</a></li>
+            <li><a href="gallery.html">ගැලරිය</a></li>
+            <li><a href="events.html">වැඩසටහන්</a></li>
+            <li><a href="news.html">පුවත්</a></li>
+            <li><a href="contact.html">අපව අමතන්න</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="bokeh" id="bokeh-container"></div>
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1500">
+            <div
+                style="font-size: 6rem; color: var(--saffron); margin-bottom: 20px; animation: rotateLogo 20s linear infinite; display: inline-block; filter: drop-shadow(0 0 15px rgba(255, 153, 51, 0.6));">
+                <i class="fa-solid fa-dharmachakra"></i>
+            </div>
+            <h1 class="hero-title">ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන<br>ගුණ නැණ බෙලෙන් පිරිපුන්<br>සමාජයක් කරා...</h1>
+            <p class="hero-subtitle">ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන මඟින් තොරතුරු යුගයට ඔබින ධර්මඥානයෙන් හෙබි සිසු
+                පරපුරක් බිහිකිරීම.</p>
+        </div>
+    </header>
+
+    <!-- INTRO SUMMARY -->
+    <section class="section" style="text-align: center;">
+        <h2 class="section-title" data-aos="fade-up">අපගේ මෙහෙවර</h2>
+        <p style="max-width: 800px; margin: auto; font-size: 1.2rem; line-height: 2;" data-aos="fade-in"
+            data-aos-delay="200">
+            දහම් අධ්‍යාපනය තුලින් විනයගරුක ගුණවත් යහපත් සමාජයක් උදෙසා අනාගත පරපුරකට නිවැරදි මඟ පෙන්වීම අපගේ ඒකායන
+            අරමුණයි.
+            බුද්ධ දේශනාව පදනම් කරගත් අධ්‍යාපන ක්‍රමවේදයක් හරහා දරුවන්ගේ බුද්ධිය සහ ආධ්‍යාත්මික සංවර්ධනය ඇති කිරීම.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="footer-msg">බුද්ධ ශාසනයේ චිරස්ථිතිය වෙනුවෙන් 🙏</div>
+        <p class="copyright">&copy; 2026 ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන. සියලු හිමිකම් ඇවිරිණි.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        // Generate Bokeh Particles
+        const container = document.getElementById('bokeh-container');
+        for (let i = 0; i < 30; i++) {
+            let particle = document.createElement('div');
+            particle.classList.add('bokeh-particle');
+
+            let size = Math.random() * 80 + 20;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+
+            container.appendChild(particle);
+        }
+    </script>
+</body>
+
+</html>

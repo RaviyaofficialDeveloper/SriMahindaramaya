@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන - සම්බන්ධ වන්න</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="nav-logo-icon">
+        <i class="fa-solid fa-dharmachakra"></i>
+      </div>
+      <div class="nav-title">ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන</div>
+    </div>
+
+    <div class="mobile-menu-btn" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">මුල් පිටුව</a></li>
+      <li><a href="about.html">අපි ගැන</a></li>
+      <li><a href="courses.html">පාඨමාලා</a></li>
+      <li><a href="gallery.html">ගැලරිය</a></li>
+      <li><a href="events.html">වැඩසටහන්</a></li>
+      <li><a href="news.html">පුවත්</a></li>
+      <li><a href="contact.html">අපව අමතන්න</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header" data-aos="fade-down">
+    <h1 class="page-title">අපව අමතන්න</h1>
+    <p>ඔබගේ අදහස් සහ යෝජනා අපට යොමුකරන්න</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="contact-container">
+
+      <!-- Contact Details (Left) -->
+      <div class="contact-info" data-aos="fade-right">
+        <h2 style="color: var(--saffron); margin-bottom: 30px; font-size: 2rem;">සම්බන්ධ වීමට</h2>
+
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span style="display: block; color: var(--saffron); font-size: 0.9rem;">ලිපිනය</span>
+            ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන,<br>ගොඩකවෙල.
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span style="display: block; color: var(--saffron); font-size: 0.9rem;">දුරකථන</span>
+            +94*********<br>+94*********
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span style="display: block; color: var(--saffron); font-size: 0.9rem;">විද්‍යුත් තැපෑල</span>
+            info@srimahindarama.lk
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <span style="display: block; color: var(--saffron); font-size: 0.9rem;">විවෘත වේලාවන්</span>
+            සඳුදා - සිකුරාදා : පෙ.ව.**** - ප.ව. ****
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form & Map (Right) -->
+      <div class="contact-form-map" data-aos="fade-left" data-aos-delay="200">
+
+        <div class="contact-form">
+          <h2 style="color: var(--saffron); margin-bottom: 25px; font-size: 1.8rem;">පණිවිඩයක් එවන්න</h2>
+
+          <form action="https://formspree.io/f/meepknlj" method="POST">
+
+            <div class="form-group">
+              <input type="text" name="name" placeholder="ඔබගේ නම" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" placeholder="විද්‍යුත් තැපෑල" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" placeholder="මාතෘකාව" required>
+            </div>
+
+            <div class="form-group">
+              <textarea name="message" rows="5" placeholder="ඔබගේ පණිවිඩය..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              පණිවිඩය යවන්න <i class="fa-solid fa-paper-plane" style="margin-left:8px;"></i>
+            </button>
+
+          </form>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.75870436311462!2d80.65083563254083!3d6.504048308829166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3f012442c6349%3A0xf4234bae417f2d7b!2sGodakawela%2C%20Mahinda%20Maha%20Viharaya!5e0!3m2!1sen!2slk!4v1774846480941!5m2!1sen!2slk"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <div class="footer-msg">බුද්ධ ශාසනයේ චිරස්ථිතිය වෙනුවෙන් 🙏</div>
+    <p class="copyright">&copy; 2026 ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන. සියලු හිමිකම් ඇවිරිණි.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
+  </script>
+</body>
+
+</html>

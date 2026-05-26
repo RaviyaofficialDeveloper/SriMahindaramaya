@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන - ගැලරිය</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Lightbox Styles */
+    #lightbox {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      position: fixed;
+      z-index: 2000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      pointer-events: none;
+      /* Only allow clicks when active */
+    }
+
+    #lightbox.active {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #lightbox-img {
+      max-width: 90%;
+      max-height: 80vh;
+      box-shadow: 0 0 20px rgba(255, 153, 51, 0.5);
+      border: 2px solid var(--saffron);
+      border-radius: 10px;
+      animation: zoomInLightBox 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    #lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    #lightbox-close:hover {
+      color: var(--saffron);
+      transform: scale(1.1);
+    }
+
+    @keyframes zoomInLightBox {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="nav-logo-icon">
+        <i class="fa-solid fa-dharmachakra"></i>
+      </div>
+      <div class="nav-title">ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන</div>
+    </div>
+
+    <div class="mobile-menu-btn" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">මුල් පිටුව</a></li>
+      <li><a href="about.html">අපි ගැන</a></li>
+      <li><a href="courses.html">පාඨමාලා</a></li>
+      <li><a href="gallery.html">ගැලරිය</a></li>
+      <li><a href="events.html">වැඩසටහන්</a></li>
+      <li><a href="news.html">පුවත්</a></li>
+      <li><a href="contact.html">අපව අමතන්න</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header" data-aos="fade-down">
+    <h1 class="page-title">අපගේ ගැලරිය</h1>
+    <p>අපගේ පිරිවෙනේ සොඳුරු මතකයන්</p>
+  </div>
+
+  <!-- GALLERY SECTION -->
+  <section class="section">
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filters" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">සියල්ල</button>
+      <button class="filter-btn" data-filter="pirivena">පිරිවෙන් ජීවිතය</button>
+      <button class="filter-btn" data-filter="education">අධ්‍යාපන</button>
+      <button class="filter-btn" data-filter="events">උත්සව / අවස්ථා</button>
+    </div>
+
+    <!-- Section 1: Pirivena Life -->
+    <div class="gallery-section-wrapper" data-category="pirivena">
+      <h2 class="gallery-category-title" data-aos="fade-right">පිරිවෙන් ජීවිතය</h2>
+      <div class="scroll-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="scroll-track">
+          <!-- Cards -->
+          <div class="gallery-card" onclick="openLightbox('assets/images/temple_monks.png')">
+            <img src="assets/images/temple_monks.png" loading="lazy" alt="Pirivena Life">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/bodhi_tree.png')">
+            <img src="assets/images/bodhi_tree.png" loading="lazy" alt="Pirivena Life">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/hero_dharmachakra.png')">
+            <img src="assets/images/hero_dharmachakra.png" loading="lazy" alt="Pirivena Life">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/temple_monks.png')">
+            <img src="assets/images/temple_monks.png" loading="lazy" alt="Pirivena Life">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Education -->
+    <div class="gallery-section-wrapper" data-category="education">
+      <h2 class="gallery-category-title" data-aos="fade-right">අධ්‍යාපන</h2>
+      <div class="scroll-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="scroll-track">
+          <div class="gallery-card" onclick="openLightbox('assets/images/bodhi_tree.png')">
+            <img src="assets/images/bodhi_tree.png" loading="lazy" alt="Education">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/hero_dharmachakra.png')">
+            <img src="assets/images/hero_dharmachakra.png" loading="lazy" alt="Education">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/temple_monks.png')">
+            <img src="assets/images/temple_monks.png" loading="lazy" alt="Education">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/bodhi_tree.png')">
+            <img src="assets/images/bodhi_tree.png" loading="lazy" alt="Education">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Events -->
+    <div class="gallery-section-wrapper" data-category="events">
+      <h2 class="gallery-category-title" data-aos="fade-right">උත්සව / අවස්ථා</h2>
+      <div class="scroll-container" data-aos="fade-up" data-aos-delay="300">
+        <div class="scroll-track">
+          <div class="gallery-card" onclick="openLightbox('assets/images/hero_dharmachakra.png')">
+            <img src="assets/images/hero_dharmachakra.png" loading="lazy" alt="Events">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/temple_monks.png')">
+            <img src="assets/images/temple_monks.png" loading="lazy" alt="Events">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/bodhi_tree.png')">
+            <img src="assets/images/bodhi_tree.png" loading="lazy" alt="Events">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+          <div class="gallery-card" onclick="openLightbox('assets/images/hero_dharmachakra.png')">
+            <img src="assets/images/hero_dharmachakra.png" loading="lazy" alt="Events">
+            <div class="card-overlay"></div>
+            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Screen">
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <div class="footer-msg">බුද්ධ ශාසනයේ චිරස්ථිතිය වෙනුවෙන් 🙏</div>
+    <p class="copyright">&copy; 2026 ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන. සියලු හිමිකම් ඇවිරිණි.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
+
+    // Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(src) {
+      if (!lightbox || !lightboxImg) return;
+      lightbox.classList.add('active');
+      lightboxImg.src = src;
+    }
+
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.classList.remove('active');
+      setTimeout(() => {
+        lightboxImg.src = '';
+      }, 300); // clear src after fade out
+    }
+
+    // Close Lightbox on outside click
+    if (lightbox) {
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    // Filtering Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sections = document.querySelectorAll('.gallery-section-wrapper');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        sections.forEach(section => {
+          if (filterValue === 'all' || section.getAttribute('data-category') === filterValue) {
+            section.classList.remove('hidden');
+            // Slight delay to trigger opacity transition after display block
+            setTimeout(() => {
+              section.style.opacity = '1';
+            }, 50);
+          } else {
+            section.style.opacity = '0';
+            setTimeout(() => {
+              section.classList.add('hidden');
+            }, 500); // matches transition time
+          }
+        });
+      });
+    });
+
+    // Infinite Scrolling Logic: Clone items inside each track to create seamless loop
+    const scrollTracks = document.querySelectorAll('.scroll-track');
+    scrollTracks.forEach(track => {
+      // Clone all children and append to the end
+      const originalCards = track.querySelectorAll('.gallery-card');
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        track.appendChild(clone);
+      });
+    });
+  </script>
+</body>
+
+</html>

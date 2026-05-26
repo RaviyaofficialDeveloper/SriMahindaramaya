@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන - පාඨමාලා</title>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="nav-logo-icon">
+        <i class="fa-solid fa-dharmachakra"></i>
+      </div>
+      <div class="nav-title">ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන</div>
+    </div>
+    
+    <div class="mobile-menu-btn" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">මුල් පිටුව</a></li>
+      <li><a href="about.html">අපි ගැන</a></li>
+      <li><a href="courses.html">පාඨමාලා</a></li>
+      <li><a href="gallery.html">ගැලරිය</a></li>
+      <li><a href="events.html">වැඩසටහන්</a></li>
+      <li><a href="news.html">පුවත්</a></li>
+      <li><a href="contact.html">අපව අමතන්න</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header" data-aos="fade-down">
+    <h1 class="page-title">අපගේ පාඨමාලා</h1>
+    <p>ධර්මය හා භාෂා අධ්‍යයනය සඳහා විධිමත් පාඨමාලා</p>
+  </div>
+
+  <!-- COURSES SECTION -->
+  <section class="section">
+    <div class="courses-grid">
+      <!-- Course 1 -->
+      <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="course-icon"><i class="fa-solid fa-book-open"></i></div>
+        <h3 class="course-title">පාලි භාෂාව</h3>
+        <p>පාලි භාෂාව හා ව්‍යාකරණ පිළිබඳ මූලික හා උසස් අධ්‍යනයන්. ත්‍රිපිටකය කියවීමට හා අවබෝධයට මඟ පෙන්වීම.</p>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="course-icon"><i class="fa-solid fa-om"></i></div>
+        <h3 class="course-title">සංස්කෘත</h3>
+        <p>සංස්කෘත භාෂා ප්‍රවීණතාව, ඓතිහාසික ග්‍රන්ථ හා සාහිත්‍යය පිළිබඳ විධිමත් දැනුමක් පුහුණු කිරීම.</p>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="course-icon"><i class="fa-solid fa-font"></i></div>
+        <h3 class="course-title">සිංහල සාහිත්‍යය</h3>
+        <p>පැරණි හා නූතන සිංහල සාහිත්‍යය, ව්‍යාකරණ සහ සම්භාව්‍ය ග්‍රන්ථ පිළිබඳ ගැඹුරු අධ්‍යයනයක් ලබාදීම.</p>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="course-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="course-icon"><i class="fa-solid fa-yin-yang"></i></div>
+        <h3 class="course-title">බෞද්ධ දර්ශනය</h3>
+        <p>බුද්ධ දේශනාවේ ගැඹුරු නාන්තර බුද්ධිමය මට්ටමකින් හා දාර්ශනික දෘෂ්ටියකින් විශ්ලේෂණය කිරීම.</p>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="course-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="course-icon"><i class="fa-solid fa-landmark"></i></div>
+        <h3 class="course-title">ශාසන ඉතිහාසය</h3>
+        <p>ආසියානු හා ශ්‍රී ලාංකීය බෞද්ධ ඉතිහාසය, සංස්කෘතික විකාශනය සහ කලා ශිල්ප පිළිබඳ ගවේෂණය.</p>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="course-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="course-icon"><i class="fa-solid fa-spa"></i></div>
+        <h3 class="course-title">භාවනා හා මානසික සුවය</h3>
+        <p>සමථ හා විදර්ශනා භාවනා ක්‍රම ඔස්සේ ආධ්‍යාත්මික දියුණුව හා මානසික සංවර්ධනය ඇති කිරීමේ ප්‍රායෝගික වැඩසටහන්.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <div class="footer-msg">බුද්ධ ශාසනයේ චිරස්ථිතිය වෙනුවෙන් 🙏</div>
+    <p class="copyright">&copy; 2026 ශ්‍රී මහින්දාරාම විද්‍යායතන පිරිවෙන. සියලු හිමිකම් ඇවිරිණි.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
+  </script>
+</body>
+</html>
